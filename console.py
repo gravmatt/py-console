@@ -35,7 +35,7 @@ def send(cmd):
     sys.stdout.flush()
 
 def position(line, column):
-    send('\033[%s,%sf' % line, column)
+    send('\033[%s,%sf' % (line, column))
 
 def up(value):
     send('\033[%sA' % value)
