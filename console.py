@@ -52,7 +52,7 @@ def left(value=1):
 def saveCursor():
     send('\033[s')
 
-def restoreCursor(value):
+def restoreCursor():
     send('\033[u')
 
 def clear():
