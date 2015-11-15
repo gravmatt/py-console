@@ -37,16 +37,16 @@ def send(cmd):
 def position(line, column):
     send('\033[%s,%sf' % (line, column))
 
-def up(value):
+def up(value=1):
     send('\033[%sA' % value)
 
-def down(value):
+def down(value=1):
     send('\033[%sB' % value)
 
-def right(value):
+def right(value=1):
     send('\033[%sC' % value)
 
-def left(value):
+def left(value=1):
     send('\033[%sD' % value)
 
 def saveCursor():
