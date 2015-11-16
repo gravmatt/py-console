@@ -35,7 +35,7 @@ def send(cmd):
     sys.stdout.flush()
 
 def position(line, column):
-    send('\033[%s,%sf' % (line, column))
+    send('\033[%s;%sf' % (line, column))
 
 def up(value=1):
     send('\033[%sA' % value)
@@ -52,7 +52,7 @@ def left(value=1):
 def saveCursor():
     send('\033[s')
 
-def restoreCursor():
+def restoreCursor(value):
     send('\033[u')
 
 def clear():
