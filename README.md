@@ -82,6 +82,11 @@ console.position(line, column)
 console.position(2, 15)
 ```
 
+Move the cursor to a home position (1, 1).
+```
+console.homePos()
+```
+
 Moves the current cursor position up, down, left or right by the specified value.
 ```
 console.up(value)

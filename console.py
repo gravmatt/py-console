@@ -38,6 +38,9 @@ def send(cmd):
 def position(line, column):
     send('\033[%s;%sf' % (line, column))
 
+def homePos():
+    send('\033[H')
+
 def up(value=1):
     send('\033[%sA' % value)
 
