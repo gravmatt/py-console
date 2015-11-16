@@ -112,12 +112,12 @@ console.clearLine()
 
 Clear line from the current cursor position to the end.
 ```
-console.clearLine()
+console.clearLineFromPos()
 ```
 
 Clear line from begin to current cursor position.
 ```
-console.clearLine()
+console.clearLineToPos()
 ```
 
 ## Licence
