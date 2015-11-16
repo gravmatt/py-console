@@ -7,6 +7,7 @@ import sys
 
 off='\033[0m\033[27m'
 bold='\033[1m'
+dim='\033[2m'
 underscore='\033[4m'
 blink='\033[5m'
 reverse='\033[7m'
@@ -50,16 +51,24 @@ def left(value=1):
     send('\033[%sD' % value)
 
 def saveCursor():
-    send('\033[s')
+    send('\0337')
+    # send('\033[s')
 
-def restoreCursor(value):
-    send('\033[u')
+def restoreCursor():
+    send('\0338')
+    # send('\033[u')
 
 def clear():
     send('\033[2J')
 
-def clearLine():
+def clearLineFromPos():
     send('\033[K')
+
+def clearLineToPos():
+    send('\033[1K')
+
+def clearLine():
+    send('\033[2K')
 
 def write(text, *style):
     if(style):

@@ -40,6 +40,7 @@ console.writeLine('Reverse the green color', console.green, console.reverse)
 | :----------------- | :----------------------------------- |
 | console.off        | All attributes off                   |
 | console.bold       | Bold                                 |
+| console.dim        | Dim                                  |
 | console.underscore | Underscore (monochrome display only) |
 | console.blink      | Blink                                |
 | console.reverse    | Reverse                              |
@@ -105,6 +106,16 @@ console.clear()
 ```
 
 Clear the entire line of on the current cursor position.
+```
+console.clearLine()
+```
+
+Clear line from the current cursor position to the end.
+```
+console.clearLine()
+```
+
+Clear line from begin to current cursor position.
 ```
 console.clearLine()
 ```
